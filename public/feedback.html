@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - HealthCare</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1>HealthCare</h1>
+          <span>Your Health Journey Starts Here</span>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="bmi.html" class="nav-link">BMI Calculator</a></li>
+            <li><a href="diet.html" class="nav-link">Diet Plan</a></li>
+            <li><a href="exercise.html" class="nav-link">Exercise</a></li>
+            <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Share Your Experience</h1>
+          <p>Tell us about your health journey and inspire others</p>
+        </div>
+      </section>
+
+      <section class="feedback-form-section">
+        <div class="container">
+          <div class="feedback-container">
+            <div class="feedback-form">
+              <h2>Share Your Feedback</h2>
+              <p>
+                Your experience matters to us and helps improve our tools for everyone. Share your progress, challenges,
+                or success stories!
+              </p>
+
+              <form id="feedback-form">
+                <div class="form-group">
+                  <label for="name">Name (Optional)</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" />
+                  <small class="help-text">Leave blank to submit anonymously</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="experience-type">Type of Experience</label>
+                  <select id="experience-type" name="type" required>
+                    <option value="">Select experience type</option>
+                    <option value="success-story">Success Story</option>
+                    <option value="progress-update">Progress Update</option>
+                    <option value="tool-feedback">Tool Feedback</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="general">General Comment</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="rating">Overall Experience</label>
+                  <div class="rating-input">
+                    <div class="stars">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label for="star5" class="star">★</label>
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label for="star4" class="star">★</label>
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label for="star3" class="star">★</label>
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label for="star2" class="star">★</label>
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label for="star1" class="star">★</label>
+                    </div>
+                    <span id="rating-text" class="rating-text">Click a star to rate</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="feedback-text">Your Feedback</label>
+                  <textarea
+                    id="feedback-text"
+                    name="feedback"
+                    rows="6"
+                    required
+                    placeholder="Share your thoughts, progress, challenges, or suggestions..."
+                  ></textarea>
+                  <div class="character-count"><span id="char-count">0</span>/1000 characters</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="allow-display" name="allowDisplay" />
+                    <span class="checkmark"></span>
+                    I allow my feedback to be displayed publicly to inspire others
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+              </form>
+
+              <div id="feedback-success" class="success-message" style="display: none">
+                <h3>Thank you for your feedback! 🎉</h3>
+                <p>
+                  Your experience has been submitted successfully. It helps us improve and motivates others on their
+                  health journey.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-feedback">
+        <div class="container">
+          <h2>Community Stories</h2>
+          <p class="section-intro">Read inspiring stories from others who are on their health journey</p>
+
+          <div id="feedback-list" class="feedback-grid">
+            <!-- Sample feedback - will be replaced by dynamic content -->
+            <div class="feedback-item">
+              <div class="feedback-header">
+                <div class="user-info">
+                  <strong>Sarah M.</strong>
+                  <div class="rating">
+                    <span class="stars">★★★★★</span>
+                  </div>
+                </div>
+                <span class="feedback-type success-story">Success Story</span>
+              </div>
+              <div class="feedback-content">
+                <p>
+                  "I've lost 15 pounds in 3 months using the diet plans from HealthCare! The BMI calculator helped me
+                  understand where I started, and the personalized meal plans made it so much easier to stick to healthy
+                  eating. Thank you!"
+                </p>
+              </div>
+              <div class="feedback-date">2 weeks ago</div>
+            </div>
+
+            <div class="feedback-item">
+              <div class="feedback-header">
+                <div class="user-info">
+                  <strong>Mike R.</strong>
+                  <div class="rating">
+                    <span class="stars">★★★★☆</span>
+                  </div>
+                </div>
+                <span class="feedback-type progress-update">Progress Update</span>
+              </div>
+              <div class="feedback-content">
+                <p>
+                  "One month into the strength training program and I can already see improvements! My BMI is moving in
+                  the right direction and I feel stronger. The exercise plans are well-structured and easy to follow."
+                </p>
+              </div>
+              <div class="feedback-date">1 month ago</div>
+            </div>
+
+            <div class="feedback-item">
+              <div class="feedback-header">
+                <div class="user-info">
+                  <strong>Emma L.</strong>
+                  <div class="rating">
+                    <span class="stars">★★★★★</span>
+                  </div>
+                </div>
+                <span class="feedback-type tool-feedback">Tool Feedback</span>
+              </div>
+              <div class="feedback-content">
+                <p>
+                  "The BMI calculator is so user-friendly! I love how it explains the categories and gives advice. It's
+                  helped me track my progress better than any other tool I've used."
+                </p>
+              </div>
+              <div class="feedback-date">3 weeks ago</div>
+            </div>
+          </div>
+
+          <div class="load-more">
+            <button id="load-more-btn" class="btn btn-outline">Load More Stories</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 HealthCare. Built with ❤️ for your health journey.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="feedback.js"></script>
+  </body>
+</html>

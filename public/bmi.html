@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator - HealthCare</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1>HealthCare</h1>
+          <span>Your Health Journey Starts Here</span>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="bmi.html" class="nav-link active">BMI Calculator</a></li>
+            <li><a href="diet.html" class="nav-link">Diet Plan</a></li>
+            <li><a href="exercise.html" class="nav-link">Exercise</a></li>
+            <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>BMI Calculator</h1>
+          <p>Calculate your Body Mass Index and understand your current health status</p>
+        </div>
+      </section>
+
+      <section class="calculator-section">
+        <div class="container">
+          <div class="calculator-container">
+            <div class="calculator-form">
+              <h2>Enter Your Details</h2>
+              <form id="bmi-form">
+                <div class="form-group">
+                  <label for="height">Height</label>
+                  <div class="input-group">
+                    <input type="number" id="height" name="height" step="0.01" min="0" required />
+                    <select id="height-unit" name="height-unit">
+                      <option value="cm">cm</option>
+                      <option value="ft">ft/in</option>
+                    </select>
+                  </div>
+                  <div id="height-inches" class="input-group" style="display: none">
+                    <label for="inches">Inches</label>
+                    <input type="number" id="inches" name="inches" min="0" max="11" step="1" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="weight">Weight</label>
+                  <div class="input-group">
+                    <input type="number" id="weight" name="weight" step="0.1" min="0" required />
+                    <select id="weight-unit" name="weight-unit">
+                      <option value="kg">kg</option>
+                      <option value="lbs">lbs</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Calculate BMI</button>
+              </form>
+            </div>
+
+            <div class="result-section">
+              <div id="bmi-result" class="bmi-result" style="display: none">
+                <h3>Your BMI Result</h3>
+                <div class="bmi-value">
+                  <span id="bmi-number">0</span>
+                  <span class="bmi-unit">kg/m²</span>
+                </div>
+                <div id="bmi-category" class="bmi-category"></div>
+                <div id="bmi-advice" class="bmi-advice"></div>
+
+                <div class="next-steps">
+                  <h4>Next Steps</h4>
+                  <p>Ready to work towards your health goals?</p>
+                  <div class="action-buttons">
+                    <a href="diet.html" class="btn btn-secondary">Get Diet Plan</a>
+                    <a href="exercise.html" class="btn btn-secondary">View Exercises</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bmi-info">
+            <h3>BMI Categories</h3>
+            <div class="bmi-scale">
+              <div class="scale-item underweight">
+                <div class="scale-color"></div>
+                <span>Underweight: Below 18.5</span>
+              </div>
+              <div class="scale-item normal">
+                <div class="scale-color"></div>
+                <span>Normal: 18.5 - 24.9</span>
+              </div>
+              <div class="scale-item overweight">
+                <div class="scale-color"></div>
+                <span>Overweight: 25.0 - 29.9</span>
+              </div>
+              <div class="scale-item obese">
+                <div class="scale-color"></div>
+                <span>Obese: 30.0 and above</span>
+              </div>
+            </div>
+
+            <div class="bmi-disclaimer">
+              <p>
+                <strong>Note:</strong> BMI is a useful screening tool, but it doesn't directly measure body fat. It may
+                not accurately reflect the health status of athletes with high muscle mass or elderly individuals with
+                low muscle mass. Consult with a healthcare professional for a complete health assessment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 HealthCare. Built with ❤️ for your health journey.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="bmi.js"></script>
+  </body>
+</html>
